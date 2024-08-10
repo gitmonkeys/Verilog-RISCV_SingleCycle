@@ -1,0 +1,328 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Jun 26 08:11:15 2024
+# Process ID: 10892
+# Current directory: C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.runs/synth_1
+# Command line: vivado.exe -log RISCV_topmodule.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISCV_topmodule.tcl
+# Log file: C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.runs/synth_1/RISCV_topmodule.vds
+# Journal file: C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.runs/synth_1\vivado.jou
+# Running On: DESKTOP-5GRTQHR, OS: Windows, CPU Frequency: 4008 MHz, CPU Physical cores: 2, Host memory: 15966 MB
+#-----------------------------------------------------------
+source RISCV_topmodule.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/utils_1/imports/synth_1/RISCV_topmodule.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/utils_1/imports/synth_1/RISCV_topmodule.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top RISCV_topmodule -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9520
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 820.168 ; gain = 406.910
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'RISCV_topmodule' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_IM32bits' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_IM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_IM32bits' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_IM.v:23]
+WARNING: [Synth 8-7071] port 'clk' of module 'RISCV_IM32bits' is unconnected for instance 'InstructionMemory' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:34]
+WARNING: [Synth 8-7023] instance 'InstructionMemory' of module 'RISCV_IM32bits' has 3 connections declared, but only 2 given [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:34]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_PC' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_PC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_PC' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_PC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_RegisterFile' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISV_RegisterFile.v:23]
+WARNING: [Synth 8-6104] Input port 'A1' has an internal driver [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISV_RegisterFile.v:67]
+WARNING: [Synth 8-6104] Input port 'A2' has an internal driver [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISV_RegisterFile.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_RegisterFile' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISV_RegisterFile.v:23]
+WARNING: [Synth 8-7071] port 'ins' of module 'RISCV_RegisterFile' is unconnected for instance 'RegisterFile' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:38]
+WARNING: [Synth 8-7023] instance 'RegisterFile' of module 'RISCV_RegisterFile' has 9 connections declared, but only 8 given [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:38]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_ControlUnit' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ControlUnit.v:22]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_ControlUnitDecoder' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ControlUnit.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_ControlUnitDecoder' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ControlUnit.v:56]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_ALUDecoder' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ControlUnit.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_ALUDecoder' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ControlUnit.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_ControlUnit' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ControlUnit.v:22]
+WARNING: [Synth 8-7071] port 'Jump' of module 'RISCV_ControlUnit' is unconnected for instance 'ControlUnit' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:43]
+WARNING: [Synth 8-7071] port 'ALUOp' of module 'RISCV_ControlUnit' is unconnected for instance 'ControlUnit' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:43]
+WARNING: [Synth 8-7023] instance 'ControlUnit' of module 'RISCV_ControlUnit' has 11 connections declared, but only 9 given [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:43]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_PCplus4' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_PCplus4.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_PCplus4' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_PCplus4.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_SignExtend' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISV_SignExtend.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_SignExtend' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISV_SignExtend.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_shiftleft' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_shiftleft.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_shiftleft' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_shiftleft.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_ALUPCBranch' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ALUPCBranch.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_ALUPCBranch' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ALUPCBranch.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_MUX5bits' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_MUX4bits.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_MUX5bits' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_MUX4bits.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_ANDgate' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ANDgate.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_ANDgate' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ANDgate.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_MUX32b' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_MUX32b.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_MUX32b' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_MUX32b.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_ALU' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ALU.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_ALU' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_ALU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RISCV_DataMemory' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_DataMemory.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_DataMemory' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_DataMemory.v:23]
+WARNING: [Synth 8-7071] port 'MemRead' of module 'RISCV_DataMemory' is unconnected for instance 'DataMemory' [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:67]
+WARNING: [Synth 8-7023] instance 'DataMemory' of module 'RISCV_DataMemory' has 6 connections declared, but only 5 given [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'RISCV_topmodule' (0#1) [C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.srcs/sources_1/new/RISCV_topmodule.v:23]
+WARNING: [Synth 8-7129] Port inputA[31] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[30] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[29] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[28] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[27] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[26] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[25] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[24] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[23] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[22] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[21] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[20] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[19] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[18] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[17] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[16] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[15] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[14] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[13] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[12] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[11] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[10] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[9] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[8] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[7] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[6] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputA[5] in module RISCV_DataMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[31] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[30] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[29] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[28] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[27] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[26] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[15] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[14] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[13] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[12] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[11] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[10] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[9] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[8] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[7] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[6] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[5] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[4] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[3] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[2] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[1] in module RISCV_RegisterFile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ins[0] in module RISCV_RegisterFile is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 912.438 ; gain = 499.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 912.438 ; gain = 499.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 912.438 ; gain = 499.180
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 912.438 ; gain = 499.180
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
++---RAMs : 
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
++---Muxes : 
+	  11 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3971] The signal "RISCV_topmodule/RegisterFile/mem_reg" was recognized as a true dual port RAM template.
+RAM Pipeline Warning: Read Address Register Found For RAM RegisterFile/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM RegisterFile/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-3971] The signal "RISCV_topmodule/RegisterFile/mem_reg" was recognized as a true dual port RAM template.
+RAM Pipeline Warning: Read Address Register Found For RAM RegisterFile/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 1126.574 ; gain = 713.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
+-------NONE-------
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 1127.598 ; gain = 714.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
+-------NONE-------
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance RegisterFile/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance RegisterFile/mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1127.832 ; gain = 714.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 1127.832 ; gain = 714.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 1127.832 ; gain = 714.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 1127.832 ; gain = 714.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 1127.832 ; gain = 714.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 1127.832 ; gain = 714.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 1127.832 ; gain = 714.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |     9|
+|3     |LUT1     |     1|
+|4     |LUT2     |    33|
+|5     |RAMB18E1 |     2|
+|6     |FDCE     |     2|
+|7     |IBUF     |     2|
+|8     |OBUF     |    64|
++------+---------+------+
+
+Report Instance Areas: 
++------+-----------------+-------------------+------+
+|      |Instance         |Module             |Cells |
++------+-----------------+-------------------+------+
+|1     |top              |                   |   114|
+|2     |  ALU            |RISCV_ALU          |     8|
+|3     |  ProgramCounter |RISCV_PC           |     5|
+|4     |  RegisterFile   |RISCV_RegisterFile |    34|
++------+-----------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 1127.832 ; gain = 714.574
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 61 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 1127.832 ; gain = 714.574
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 1127.832 ; gain = 714.574
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1139.723 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1240.164 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: cad9d446
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 61 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:30 . Memory (MB): peak = 1240.164 ; gain = 836.324
+INFO: [Common 17-1381] The checkpoint 'C:/Users/choth/Documents/RISCV/RISCVSingleCycle/RISCVSingleCycle.runs/synth_1/RISCV_topmodule.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file RISCV_topmodule_utilization_synth.rpt -pb RISCV_topmodule_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 26 08:11:52 2024...
